@@ -21,3 +21,5 @@ line.toString().split('\n').forEach(function (line) {
       console.log(dupa.toString());
   }
 });
+
+https://www.codeeval.com/open_challenges/46/
