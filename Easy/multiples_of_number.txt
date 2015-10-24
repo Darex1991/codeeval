@@ -1,0 +1,23 @@
+https://www.codeeval.com/open_challenges/18/
+
+// var fs  = require("fs");
+// fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) {
+
+line= ['13,8\n'];
+line.toString().split('\n').forEach(function (line) {
+  if (line != "") {
+      a = line.split(',');  
+      test = parseInt(a[0]);
+      test1 = parseInt(a[1]);  
+      newTest1 = test1;
+      if(test != test1){
+        for(var i = 2 ; newTest1 * i - test <= test1 * i  ; i++){
+            if(newTest1 * i >= test){
+                newTest1 = newTest1 * i;
+            }
+        }
+      }
+      console.log(newTest1);
+      
+  }
+});
