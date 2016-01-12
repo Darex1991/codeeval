@@ -1,0 +1,34 @@
+Create an object Person, which has a property: tasks (an array).
+Add simple tasks to that array based on: name (string) and completed (boolean) - 3 completed and 3 not completed
+Display only completed tasks
+
+person={tasks :[{
+name: 'asd1',
+completed: 0
+},{
+name: 'asd2',
+completed: 0
+} ,{
+name: 'asd3',
+completed: 0
+},
+{
+name: 'asd4',
+completed: 1
+} ,
+{
+name: 'asd5',
+completed: 1
+},
+{
+name: 'asd6',
+completed: 1
+}
+ 
+]}
+newArray = [];
+person.tasks.forEach(function(task){
+if(task.completed == 1){
+newArray.push(task)}
+});
+console.log(newArray);
