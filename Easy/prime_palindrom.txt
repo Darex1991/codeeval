@@ -25,3 +25,29 @@ line.toString().split('\n').forEach(function (line) {
       console.log(dupa[dupaLength-1]);
   }
 });
+
+
+function check2(number){
+  a = number;
+  b = 0;
+  result = undefined;
+  
+  while(b<a && result == undefined){
+    
+    c = a.toString();
+    
+    if(c[0] == c[c.length - 1]){
+      stringStart = 0;
+      stringEnd = c.length - 1;
+      
+      for(stringStart; stringStart < stringEnd ; stringStart++){
+        if(c[stringStart + 1] == c[stringEnd - 1]){result = c;}
+      }
+
+
+    }
+
+  a--;
+  }
+  console.log(result);
+}
