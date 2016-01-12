@@ -1,0 +1,100 @@
+<!-- https://jsfiddle.net/pL4uqx3f/ -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<button id='test'>Try it</button>
+
+<p id="demo"></p>
+
+<script>
+creditCard = {
+pin: '1234',
+ballance: 1111,
+disabled: false
+}
+
+function atm(card){
+
+function checkCard(){
+return card.disabled == false;
+}
+
+function checkPIN(){
+return card.pin === prompt("Please enter your PIN");
+}
+
+function displayCurrentBalance(){
+console.log(card.ballance);
+}
+
+function withdrawingMoney(howMany){
+card.ballance - howMany;
+}
+
+function addingMoney(howMany){
+  if(howMany == undefined){
+    alert("Yo didn't give cash");
+card.log.push('Dont have money')
+  }else{
+    card.ballance + howMany ;
+  }
+}
+
+function checkOptionToDrawMoney(){
+	card.ballance >= howMany;
+}
+
+if(checkCard()){
+  card.log = [];
+  if(checkPIN()){
+   card.log.push('Correct Pin');
+    whantBallance = confirm('Do you want see your balance?');
+    if(whantBallance == true){displayCurrentBalance();
+   card.log.push('Display balance: '+ card.ballance);}
+    whantCash = confirm('Do you want take money');
+
+    if(whantCash == true){
+        howMany = prompt("Please enter amount");
+        if(checkOptionToDrawMoney(howMany)){
+          card.log.push('Withdraw money: ' +howMany);
+        	card.log.push('Display balance before: '+ card.ballance);
+          withdrawingMoney(howMany);
+					card.log.push('Display balance after: '+ card.ballance);
+       }else{
+         alert("You don't have enough money");
+         card.log.push('Dont have money for withdraw.' +howMany);
+       }
+    }
+
+    whantAddCash = confirm('Do you want add a money');
+    if(whantAddCash == true){
+      card.log.push('Add money');addingMoney();
+    }
+    whantLog = confirm('Do you want operation log?');
+if(whantLog == true){
+console.log(card.log);
+}
+  }
+  else{
+
+   card.log.push('Incorrect Pin');
+    card.disabled = true;
+  }
+
+}
+}
+
+
+
+
+
+
+document.getElementById('test').onclick=function(){atm(creditCard)};
+</script>
+
+</body>
+</html>
+
